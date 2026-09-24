@@ -17,7 +17,8 @@ export default function Footer() {
             <p className="font-display text-lg font-semibold text-ink">invorious</p>
           </div>
           <p className="mt-3 max-w-xs text-sm text-ink/60">
-            Custom software, technology consulting and Web3 development, built in Sydney.
+            Custom software, technology consulting and Web3 development, built in Sydney —
+            delivered by a fully remote team working from all over the world.
           </p>
         </div>
 

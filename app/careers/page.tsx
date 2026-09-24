@@ -8,25 +8,32 @@ import RoleCard, { type Role } from "@/components/RoleCard";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join Invorious, a small senior Sydney software team. Open roles: Smart Contract Engineer, Web3 Frontend Engineer, Go/Rust Infrastructure Engineer, Web3 Backend Engineer, Marketing Manager — full-time and internship.",
+    "Join Invorious, a fully remote senior software team working from around the world. Open roles: Smart Contract Engineer, Web3 Frontend Engineer, Go/Rust Infrastructure Engineer, Web3 Backend Engineer, Marketing Manager — full-time, contract or internship.",
   openGraph: {
     title: "Careers — Invorious Software Agency",
     description:
-      "Open roles at Invorious across smart contracts, Web3 frontend/backend, infrastructure and marketing — full-time and internship tracks, Sydney-based.",
+      "Open roles at Invorious across smart contracts, Web3 frontend/backend, infrastructure and marketing — full-time, contract and internship tracks, all fully remote.",
   },
 };
 
 const perks = [
-  { label: "Small team", body: "Ten people or fewer, so your work is visible and your input matters." },
+  {
+    label: "Fully remote",
+    body: "We're a team spread across the world, not a Sydney office — work from wherever you do your best work.",
+  },
   { label: "Direct client contact", body: "You'll talk to the businesses you're building for, not just a manager." },
   { label: "Breadth", body: "Move between consulting, Web2 and Web3 work instead of staying in one lane." },
-  { label: "Sydney-based", body: "In-person when it helps, flexible when it doesn't." },
+  {
+    label: "Flexible engagement",
+    body: "Every role is open full-time, contract or internship — pick what fits how you want to work.",
+  },
 ];
 
 const roles: Role[] = [
   {
     title: "Smart Contract Engineer",
     compensation: "$120k – $160k USD",
+    contract: "$70 – $95/hr USD",
     blurb:
       "Design, write and prepare audit-ready Solidity smart contracts for client Web3 products — from token mechanics to on-chain protocol logic.",
     ideal:
@@ -37,6 +44,7 @@ const roles: Role[] = [
   {
     title: "Web3 Frontend Engineer",
     compensation: "$100k – $140k USD",
+    contract: "$60 – $85/hr USD",
     blurb:
       "Build the interfaces people actually use to interact with on-chain products — wallet connections, transaction flows, and the React apps around them.",
     ideal:
@@ -47,6 +55,7 @@ const roles: Role[] = [
   {
     title: "Go/Rust Infrastructure Engineer",
     compensation: "$110k – $150k USD",
+    contract: "$65 – $90/hr USD",
     blurb:
       "Build and run the infrastructure behind our on-chain and off-chain systems — indexers, monitoring, and the services that keep them honest.",
     ideal:
@@ -57,6 +66,7 @@ const roles: Role[] = [
   {
     title: "Web3 Backend Engineer",
     compensation: "$100k – $140k USD",
+    contract: "$60 – $85/hr USD",
     blurb:
       "Design the APIs and off-chain services that connect blockchain systems to the rest of a client's business.",
     ideal:
@@ -67,6 +77,7 @@ const roles: Role[] = [
   {
     title: "Marketing Manager",
     compensation: "$85k – $115k USD",
+    contract: "$50 – $70/hr USD",
     blurb:
       "Own brand, content and lead-generation marketing across Invorious's consulting, Web2 and Web3 work.",
     ideal:
@@ -84,12 +95,12 @@ export default function CareersPage() {
         <div className="mx-auto max-w-6xl">
           <p className="text-xs font-medium text-brand-violet">Careers</p>
           <h1 className="mt-3 max-w-prose font-display text-4xl font-semibold leading-[1.1] text-ink md:text-5xl">
-            Join a small, senior team in Sydney.
+            Join a fully remote team, working from all over the world.
           </h1>
           <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-ink/70">
-            We stay deliberately small so the people doing the work stay close to the
-            clients it's for. If that sounds like how you'd rather work, we'd like to hear
-            from you.
+            Invorious is a fully remote team — our engineers and consultants are spread
+            across the world, not sitting in a single office. If that sounds like how you'd
+            rather work, we'd like to hear from you.
           </p>
         </div>
       </div>
@@ -114,11 +125,12 @@ export default function CareersPage() {
       <Section id="open-roles" className="bg-brand-gradient text-white" bordered={false} reveal>
         <p className="text-xs font-medium text-white/90">Open roles</p>
         <h2 className="mt-3 max-w-prose font-display text-2xl font-semibold">
-          Currently hiring — every role also open as a paid internship
+          Currently hiring — full-time, contract or internship, all fully remote
         </h2>
         <p className="mt-3 max-w-prose text-sm text-white/70">
-          Tap a role for the full picture: what you'd work on, compensation, who tends to
-          thrive here, and what the internship track looks like.
+          Every role below is open as a full-time hire, a contract engagement, or a paid
+          internship — wherever in the world you're based. Tap a role for the full picture:
+          what you'd work on, compensation for each track, and who tends to thrive here.
         </p>
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {roles.map((role) => (
@@ -127,10 +139,11 @@ export default function CareersPage() {
         </div>
         <p className="mt-6 text-sm text-white/60">
           Don't see the right fit?{" "}
-          <a href="mailto:hello@invorious.com" className="underline underline-offset-2">
+          <a href="mailto:career@invorious.com" className="underline underline-offset-2">
             Email us
           </a>{" "}
-          — we're consistently looking for strong engineers and consultants.
+          — we're consistently looking for strong engineers and consultants, remote,
+          anywhere in the world.
         </p>
       </Section>
 
@@ -145,9 +158,10 @@ export default function CareersPage() {
             <p className="mt-4 text-sm leading-relaxed text-ink/70">
               A few lines about what you'd want to work on is more useful to us than a
               formal cover letter. Mention which role and whether you're applying for the
-              full-time or internship track. Prefer email? Write to{" "}
-              <a href="mailto:hello@invorious.com" className="underline underline-offset-2">
-                hello@invorious.com
+              full-time, contract or internship track. Please also send your résumé
+              separately to{" "}
+              <a href="mailto:career@invorious.com" className="underline underline-offset-2">
+                career@invorious.com
               </a>
               .
             </p>

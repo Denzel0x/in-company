@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import Button from "./Button";
-import Spotlight from "./Spotlight";
+import { AnimatePresence, motion } from "framer-motion";
 
 export type Role = {
   title: string;
   compensation: string;
   blurb: string;
   ideal: string;
+  contract: string;
   internship: string;
 };
 
@@ -16,52 +16,68 @@ export default function RoleCard({ role }: { role: Role }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Spotlight glow="rgba(255,255,255,0.12)" className="border border-white/20 p-6 hover:border-white/40">
+    <div className="border border-white/20 bg-white/5 transition-colors duration-200 hover:border-white/40">
       <button
         type="button"
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 text-left"
+        className="flex w-full items-center justify-between gap-4 p-5 text-left"
       >
         <div>
-          <h3 className="font-display text-lg font-semibold text-white">{role.title}</h3>
-          <p className="mt-1 text-sm text-white/70">{role.compensation} · Full-time & Internship</p>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="font-display text-base font-semibold text-white">{role.title}</h3>
+            <span className="rounded-full border border-white/30 px-2 py-0.5 text-[11px] font-medium text-white/80">
+              Fully remote
+            </span>
+          </div>
+          <p className="mt-1 text-sm text-white/70">{role.compensation} (full-time)</p>
         </div>
-        <span
-          className={`shrink-0 text-2xl font-light text-white/70 transition-transform duration-200 ${
-            open ? "rotate-45" : ""
-          }`}
+        <motion.span
+          animate={{ rotate: open ? 45 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="shrink-0 text-xl leading-none text-white/70"
           aria-hidden="true"
         >
           +
-        </span>
+        </motion.span>
       </button>
 
-      {open && (
-        <div className="mt-5 space-y-3 border-t border-white/15 pt-5 text-sm leading-relaxed text-white/80">
-          <p>{role.blurb}</p>
-          <p>
-            <span className="font-medium text-white">Ideal candidate — </span>
-            {role.ideal}
-          </p>
-          <p>
-            <span className="font-medium text-white">Internship — </span>
-            {role.internship}
-          </p>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Button href="#apply" className="!bg-white !text-ink hover:!bg-brand-light">
-              Apply — Full-time
-            </Button>
-            <Button
-              href="#apply"
-              variant="secondary"
-              className="!border-white/40 !text-white hover:!border-white"
-            >
-              Apply — Internship
-            </Button>
-          </div>
-        </div>
-      )}
-    </Spotlight>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="space-y-4 border-t border-white/15 p-5 pt-4">
+              <div>
+                <p className="text-xs font-medium text-white/60">What you'd work on</p>
+                <p className="mt-1 text-sm leading-relaxed text-white/85">{role.blurb}</p>
+              </div>
+              <div>
+                <p className="text-xs font-medium text-white/60">Ideal candidate</p>
+                <p className="mt-1 text-sm leading-relaxed text-white/85">{role.ideal}</p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-3">
+                <div className="border border-white/15 p-3">
+                  <p className="text-xs font-medium text-white/60">Full-time</p>
+                  <p className="mt-1 text-sm text-white/90">{role.compensation}</p>
+                </div>
+                <div className="border border-white/15 p-3">
+                  <p className="text-xs font-medium text-white/60">Contract</p>
+                  <p className="mt-1 text-sm text-white/90">{role.contract}</p>
+                </div>
+                <div className="border border-white/15 p-3">
+                  <p className="text-xs font-medium text-white/60">Internship</p>
+                  <p className="mt-1 text-sm text-white/90">{role.internship}</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

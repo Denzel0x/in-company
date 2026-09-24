@@ -14,7 +14,7 @@ const roles = [
   "Other",
 ];
 
-const tracks = ["Full-time", "Internship"];
+const tracks = ["Full-time", "Contract", "Internship"];
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -122,6 +122,14 @@ export default function CareerForm() {
         <textarea id="message" name="message" rows={5} className={inputClass} aria-invalid={!!errors.message} />
         {errors.message && <p className="mt-1 text-xs text-red-600">{errors.message}</p>}
       </div>
+
+      <p className="text-xs leading-relaxed text-ink/60">
+        Please also send your résumé separately to{" "}
+        <a href="mailto:career@invorious.com" className="underline underline-offset-2">
+          career@invorious.com
+        </a>
+        .
+      </p>
 
       <button
         type="submit"

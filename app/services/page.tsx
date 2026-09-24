@@ -6,11 +6,11 @@ import Button from "@/components/Button";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Technology consulting, Web2 application development and Web3 blockchain engineering, delivered by Invorious in Sydney.",
+    "Technology consulting, Web2 application development and Web3 blockchain engineering, delivered by Invorious's fully remote team.",
   openGraph: {
     title: "Services — Invorious Software Agency",
     description:
-      "Technology consulting, Web2 application development and Web3 blockchain engineering, delivered by Invorious in Sydney.",
+      "Technology consulting, Web2 application development and Web3 blockchain engineering, delivered by Invorious's fully remote team.",
   },
 };
 

@@ -10,15 +10,16 @@ export default function HomePage() {
       <section className="brand-grid border-b border-line px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
           <div>
-            <p className="text-xs font-medium text-brand-violet">Sydney · Custom software development</p>
+            <p className="text-xs font-medium text-brand-violet">Fully remote · Custom software development</p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.1] text-ink md:text-5xl">
               Tailored software, built to fit how your{" "}
               <span className="brand-text-gradient">business</span> actually runs.
             </h1>
             <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-ink/70">
-              Invorious designs and builds custom web, mobile and blockchain systems for
-              Sydney businesses — from first architecture sketch to production. Trust us to
-              help you succeed through technology.
+              Invorious designs and builds custom web, mobile and blockchain systems,
+              delivered by a fully remote team working from all over the world — from
+              first architecture sketch to production. Trust us to help you succeed
+              through technology.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/start-a-project">Start a project</Button>
@@ -72,8 +73,8 @@ export default function HomePage() {
               Client-centred, by design.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/80">
-              We're a small, senior team — which means the people who scope your project
-              are the people who build it.
+              We're a fully remote, senior team spread across the world — which means the
+              people who scope your project are the people who build it.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
@@ -82,8 +83,8 @@ export default function HomePage() {
               <p className="mt-2 text-sm text-white/80">Founded in Sydney</p>
             </div>
             <div>
-              <p className="font-display text-3xl font-semibold text-brand-light">2–10</p>
-              <p className="mt-2 text-sm text-white/80">A deliberately small, senior team</p>
+              <p className="font-display text-3xl font-semibold text-brand-light">Remote</p>
+              <p className="mt-2 text-sm text-white/80">A senior team working from all over the world</p>
             </div>
             <div>
               <p className="font-display text-3xl font-semibold text-brand-light">3</p>

@@ -6,11 +6,11 @@ import Spotlight from "@/components/Spotlight";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Invorious is a Sydney-based custom software agency founded in 2021, built around a client-centred approach to technology consulting, Web2 and Web3 development.",
+    "Invorious is a fully remote custom software agency, founded in Sydney in 2021, built around a client-centred approach to technology consulting, Web2 and Web3 development.",
   openGraph: {
     title: "About — Invorious Software Agency",
     description:
-      "Founded in Sydney in 2021, Invorious is a small, senior team working across technology consulting, Web2 and Web3 development.",
+      "Founded in Sydney in 2021, Invorious is a fully remote, senior team working from around the world across technology consulting, Web2 and Web3 development.",
   },
 };
 
@@ -31,7 +31,7 @@ const values = [
 
 const stats = [
   { value: "2021", label: "Founded in Sydney" },
-  { value: "2–10", label: "A deliberately small, senior team" },
+  { value: "Remote", label: "A senior team working from all over the world" },
   { value: "3", label: "Specialties: consulting, Web2, Web3" },
   { value: "1:1", label: "Direct access to your engineers" },
 ];
@@ -49,8 +49,9 @@ export default function AboutPage() {
           <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-ink/70">
             Invorious was founded in Sydney in 2021 to work differently to the agencies and
             consultancies we'd come up through: fewer layers between the client and the
-            people doing the work, and a refusal to hand over a build without making sure
-            it actually fits the business it was built for.
+            people doing the work, a refusal to hand over a build without making sure it
+            actually fits the business it was built for, and a fully remote team so we can
+            work with the best people wherever they happen to be.
           </p>
         </div>
       </div>
@@ -66,16 +67,15 @@ export default function AboutPage() {
           </div>
           <div className="space-y-4 text-[15px] leading-relaxed text-ink/70">
             <p>
-              That founding idea has stayed true as we've grown into a small team spanning
-              technology consulting, Web2 application development and Web3 engineering.
-              We've kept the team deliberately compact — big enough to cover the
-              specialties our clients need, small enough that nothing gets lost in
-              handoffs.
+              That founding idea has stayed true as we've grown into a fully remote team
+              spanning technology consulting, Web2 application development and Web3
+              engineering. We hire the right person for the work, wherever in the world
+              they're based, rather than limiting ourselves to one city.
             </p>
             <p>
-              We're a team of 2–10 based in Sydney. We'd rather introduce you to the people
-              who'd actually work on your project during a first call than fill this page
-              with headshots and titles.
+              Our team is spread across the world, working remotely. We'd rather introduce
+              you to the people who'd actually work on your project during a first call
+              than fill this page with headshots and titles.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div>
             <p className="text-xs font-medium text-white/90">Since 2021</p>
             <h2 className="mt-3 font-display text-3xl font-semibold">
-              Small by design, not by accident.
+              Remote by design, not by accident.
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
